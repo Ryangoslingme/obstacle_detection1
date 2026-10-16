@@ -1,4 +1,4 @@
-# Autonomous Obstacle-Avoiding Robot 🤖
+# Autonomous Obstacle-Avoiding Robot 
 
 ## Project Overview
 This project implements an autonomous obstacle-avoidance robot using the e-puck robot in Webots. The robot uses proximity sensors to detect nearby obstacles and adjusts its wheel speeds to avoid collisions.
