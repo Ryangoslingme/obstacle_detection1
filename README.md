@@ -1,47 +1,49 @@
-# Obstacle Detection Using Python
+# Autonomous Obstacle-Avoiding Robot 🤖
 
 ## Project Overview
-This project explores basic robotics obstacle-detection logic using Python and simulated sensor distance readings. It combines obstacle classification with consecutive-reading analysis to identify distance trends.
+This project implements an autonomous obstacle-avoidance robot using the e-puck robot in Webots. The robot uses proximity sensors to detect nearby obstacles and adjusts its wheel speeds to avoid collisions.
 
 ## Objectives
-- Understand obstacle detection using conditional statements.
-- Compare previous and current sensor readings.
-- Detect whether an obstacle is getting closer, farther away, or remaining at the same distance.
-- Determine an appropriate response based on the measured distance.
+- Understand proximity sensors and obstacle detection.
+- Implement decision-making using Python.
+- Control robot movement through wheel-speed adjustments.
+- Simulate autonomous navigation in Webots.
 
 ## Technologies Used
-- Python
-- Conditional statements (`if`, `elif`, `else`)
-- Functions
-- Lists and loops
+- **Simulator:** Webots
+- **Programming Language:** Python
+- **Robot:** e-puck
+- **Concepts:** Proximity sensing, conditional logic, motor control, autonomous navigation
 
-## Obstacle Decision Logic
+## How It Works
+1. The robot reads values from its proximity sensors.
+2. It compares the readings with a predefined threshold.
+3. If an obstacle is detected, it changes its wheel speeds to turn away.
+4. If no obstacle is detected, it continues moving forward.
 
-| Distance | Action |
-|---|---|
-| Below 15 cm | STOP |
-| 15 cm to below 30 cm | SLOW |
-| 30 cm to 50 cm | CAUTION |
-| Above 50 cm | MOVE FORWARD |
+## Algorithm
+- Read proximity sensor values.
+- Check whether the values exceed the obstacle-detection threshold.
+- Determine the appropriate movement based on the sensor readings.
+- Apply the calculated speeds to the left and right motors.
 
-## Sensor Trend Detection
-The program compares consecutive distance readings:
-- **Getting closer:** Current distance is lower than the previous distance.
-- **Getting farther:** Current distance is higher than the previous distance.
-- **Unchanged:** Both readings are equal.
-
-## Example Sensor Readings
-`[80, 65, 48, 52, 25, 25, 18, 10]`
-
-The program analyzes the trend and selects an action for each current reading.
+## How to Run
+1. Install Webots.
+2. Open a world containing the e-puck robot.
+3. Assign the Python controller to the robot.
+4. Place the controller code in the robot's controller folder.
+5. Run the simulation and observe the robot's behavior.
 
 ## Current Status
-- Day 1: Basic obstacle-distance classification completed.
-- Day 2: Sensor trend detection combined with obstacle-action decisions.
+**Working simulation prototype.**
 
-**Note:** The sensor readings are simulated. The program has not yet been connected to physical sensors or motors.
+The robot detects obstacles using proximity sensors and changes its movement in response. Further testing and improvements can help make navigation more reliable.
 
 ## Future Improvements
-- Test the program with noisy sensor readings.
-- Improve reliability of distance-based decisions.
-- Explore integration with real sensors and motor-control hardware.
+- Tune the sensor threshold using measured readings.
+- Improve turning behavior and collision prevention.
+- Test different obstacle positions and layouts.
+- Record performance results and simulation demonstrations.
+
+## Author
+Robotics and Artificial Intelligence Engineering Student
